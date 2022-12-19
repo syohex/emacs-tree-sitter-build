@@ -1,5 +1,6 @@
 OBJS = \
   out/libtree-sitter-c.so \
+  out/libtree-sitter-cpp.so \
   out/libtree-sitter-go.so \
   out/libtree-sitter-java.so \
   out/libtree-sitter-c-sharp.so \
@@ -17,6 +18,9 @@ CFLAGS=-O3 -fPIC -shared
 all: $(OBJS)
 
 out/libtree-sitter-c.so: tree-sitter-c/src/parser.c
+	$(CC) $(CFLAGS) -o $@ $^
+
+out/libtree-sitter-cpp.so: tree-sitter-cpp/src/parser.c tree-sitter-cpp/src/scanner.cc
 	$(CC) $(CFLAGS) -o $@ $^
 
 out/libtree-sitter-go.so: tree-sitter-go/src/parser.c

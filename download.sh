@@ -13,6 +13,7 @@ cd $BUILD_DIR
 
 repos=(
   https://github.com/tree-sitter/tree-sitter-c
+  https://github.com/tree-sitter/tree-sitter-cpp
   https://github.com/tree-sitter/tree-sitter-java
   https://github.com/tree-sitter/tree-sitter-go
   https://github.com/tree-sitter/tree-sitter-rust
