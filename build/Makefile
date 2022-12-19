@@ -40,7 +40,7 @@ out/libtree-sitter-tsx.so: tree-sitter-typescript/tsx/src/parser.c tree-sitter-t
 out/libtree-sitter-json.so: tree-sitter-json/src/parser.c
 	$(CC) $(CFLAGS) -o $@ $^
 
-out/libtree-sitter-yaml.so: tree-sitter-yaml/src/parser.c
+out/libtree-sitter-yaml.so: tree-sitter-yaml/src/parser.c tree-sitter-yaml/src/scanner.cc
 	$(CC) $(CFLAGS) -o $@ $^
 
 out/libtree-sitter-toml.so: tree-sitter-toml/src/parser.c
@@ -55,3 +55,7 @@ out/libtree-sitter-dockerfile.so: tree-sitter-dockerfile/src/parser.c
 install: all
 	sudo cp out/*.so /usr/local/lib
 	sudo ldconfig
+
+.PHONY: clean
+clean:
+	-rm -f out/*.so
