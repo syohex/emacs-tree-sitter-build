@@ -11,7 +11,8 @@ OBJS = \
   out/libtree-sitter-yaml.so \
   out/libtree-sitter-toml.so \
   out/libtree-sitter-cmake.so \
-  out/libtree-sitter-dockerfile.so
+  out/libtree-sitter-dockerfile.so \
+  out/libtree-sitter-ruby.so
 
 CFLAGS=-O3 -fPIC -shared
 
@@ -54,6 +55,9 @@ out/libtree-sitter-cmake.so: tree-sitter-cmake/src/parser.c tree-sitter-cmake/sr
 	$(CC) $(CFLAGS) -o $@ $^
 
 out/libtree-sitter-dockerfile.so: tree-sitter-dockerfile/src/parser.c
+	$(CC) $(CFLAGS) -o $@ $^
+
+out/libtree-sitter-ruby.so: tree-sitter-ruby/src/parser.c tree-sitter-ruby/src/scanner.cc
 	$(CC) $(CFLAGS) -o $@ $^
 
 install: all

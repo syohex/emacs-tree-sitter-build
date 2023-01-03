@@ -19,6 +19,7 @@ repos=(
   https://github.com/tree-sitter/tree-sitter-rust
   https://github.com/tree-sitter/tree-sitter-c-sharp
   https://github.com/tree-sitter/tree-sitter-typescript
+  https://github.com/tree-sitter/tree-sitter-ruby
 
   https://github.com/tree-sitter/tree-sitter-json
   https://github.com/ikatyang/tree-sitter-yaml
