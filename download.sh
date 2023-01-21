@@ -26,6 +26,7 @@ repos=(
   https://github.com/ikatyang/tree-sitter-toml
   https://github.com/uyha/tree-sitter-cmake
   https://github.com/camdencheek/tree-sitter-dockerfile
+  https://github.com/tree-sitter/tree-sitter-html
 )
 
 for repo in "${repos[@]}"
