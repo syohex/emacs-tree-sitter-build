@@ -65,7 +65,7 @@ out/libtree-sitter-html.so: tree-sitter-html/src/parser.c tree-sitter-html/src/s
 	$(CC) $(CFLAGS) -o $@ $^
 
 install: all
-	sudo cp out/*.so /usr/local/lib
+	sudo cp -v out/*.so /usr/local/lib
 	sudo ldconfig
 
 .PHONY: clean
