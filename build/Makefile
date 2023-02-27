@@ -2,6 +2,7 @@ OBJS = \
   out/libtree-sitter-c.so \
   out/libtree-sitter-cpp.so \
   out/libtree-sitter-go.so \
+  out/libtree-sitter-gomod.so \
   out/libtree-sitter-java.so \
   out/libtree-sitter-c-sharp.so \
   out/libtree-sitter-rust.so \
@@ -26,6 +27,9 @@ out/libtree-sitter-cpp.so: tree-sitter-cpp/src/parser.c tree-sitter-cpp/src/scan
 	$(CC) $(CFLAGS) -o $@ $^
 
 out/libtree-sitter-go.so: tree-sitter-go/src/parser.c
+	$(CC) $(CFLAGS) -o $@ $^
+
+out/libtree-sitter-gomod.so: tree-sitter-go-mod/src/parser.c
 	$(CC) $(CFLAGS) -o $@ $^
 
 out/libtree-sitter-java.so: tree-sitter-java/src/parser.c
@@ -71,3 +75,8 @@ install: all
 .PHONY: clean
 clean:
 	-rm -f out/*.so
+
+.PHONY: uninstall
+uninstall:
+	sudo rm -f /usr/local/lib/libtree-sitter*.so
+	sudo ldconfig

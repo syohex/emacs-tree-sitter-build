@@ -16,6 +16,7 @@ repos=(
   https://github.com/tree-sitter/tree-sitter-cpp
   https://github.com/tree-sitter/tree-sitter-java
   https://github.com/tree-sitter/tree-sitter-go
+  https://github.com/camdencheek/tree-sitter-go-mod
   https://github.com/tree-sitter/tree-sitter-rust
   https://github.com/tree-sitter/tree-sitter-c-sharp
   https://github.com/tree-sitter/tree-sitter-typescript
