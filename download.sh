@@ -22,6 +22,8 @@ repos=(
   https://github.com/tree-sitter/tree-sitter-typescript
   https://github.com/tree-sitter/tree-sitter-ruby
   https://github.com/tree-sitter/tree-sitter-bash
+  https://github.com/elixir-lang/tree-sitter-elixir
+  https://github.com/phoenixframework/tree-sitter-heex
 
   https://github.com/tree-sitter/tree-sitter-json
   https://github.com/ikatyang/tree-sitter-yaml

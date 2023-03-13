@@ -15,7 +15,9 @@ OBJS = \
   out/libtree-sitter-dockerfile.so \
   out/libtree-sitter-ruby.so \
   out/libtree-sitter-html.so \
-  out/libtree-sitter-bash.so
+  out/libtree-sitter-bash.so \
+  out/libtree-sitter-elixir.so \
+  out/libtree-sitter-heex.so
 
 CFLAGS=-O3 -fPIC -shared
 
@@ -70,6 +72,12 @@ out/libtree-sitter-html.so: tree-sitter-html/src/parser.c tree-sitter-html/src/s
 	$(CC) $(CFLAGS) -o $@ $^
 
 out/libtree-sitter-bash.so: tree-sitter-bash/src/parser.c tree-sitter-bash/src/scanner.cc
+	$(CC) $(CFLAGS) -o $@ $^
+
+out/libtree-sitter-elixir.so: tree-sitter-elixir/src/parser.c tree-sitter-elixir/src/scanner.cc
+	$(CC) $(CFLAGS) -o $@ $^
+
+out/libtree-sitter-heex.so: tree-sitter-heex/src/parser.c
 	$(CC) $(CFLAGS) -o $@ $^
 
 install: all
