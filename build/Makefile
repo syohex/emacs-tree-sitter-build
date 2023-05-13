@@ -1,6 +1,7 @@
 OBJS = \
   out/libtree-sitter-c.so \
   out/libtree-sitter-cpp.so \
+  out/libtree-sitter-python.so \
   out/libtree-sitter-go.so \
   out/libtree-sitter-gomod.so \
   out/libtree-sitter-java.so \
@@ -27,6 +28,9 @@ out/libtree-sitter-c.so: tree-sitter-c/src/parser.c
 	$(CC) $(CFLAGS) -o $@ $^
 
 out/libtree-sitter-cpp.so: tree-sitter-cpp/src/parser.c tree-sitter-cpp/src/scanner.cc
+	$(CC) $(CFLAGS) -o $@ $^
+
+out/libtree-sitter-python.so: tree-sitter-python/src/parser.c tree-sitter-python/src/scanner.cc
 	$(CC) $(CFLAGS) -o $@ $^
 
 out/libtree-sitter-go.so: tree-sitter-go/src/parser.c
