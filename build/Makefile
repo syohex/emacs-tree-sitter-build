@@ -27,10 +27,10 @@ all: $(OBJS)
 out/libtree-sitter-c.so: tree-sitter-c/src/parser.c
 	$(CC) $(CFLAGS) -o $@ $^
 
-out/libtree-sitter-cpp.so: tree-sitter-cpp/src/parser.c tree-sitter-cpp/src/scanner.cc
+out/libtree-sitter-cpp.so: tree-sitter-cpp/src/parser.c tree-sitter-cpp/src/scanner.c
 	$(CC) $(CFLAGS) -o $@ $^
 
-out/libtree-sitter-python.so: tree-sitter-python/src/parser.c tree-sitter-python/src/scanner.cc
+out/libtree-sitter-python.so: tree-sitter-python/src/parser.c tree-sitter-python/src/scanner.c
 	$(CC) $(CFLAGS) -o $@ $^
 
 out/libtree-sitter-go.so: tree-sitter-go/src/parser.c
@@ -60,10 +60,10 @@ out/libtree-sitter-json.so: tree-sitter-json/src/parser.c
 out/libtree-sitter-yaml.so: tree-sitter-yaml/src/parser.c tree-sitter-yaml/src/scanner.cc
 	$(CC) $(CFLAGS) -o $@ $^
 
-out/libtree-sitter-toml.so: tree-sitter-toml/src/parser.c
+out/libtree-sitter-toml.so: tree-sitter-toml/src/parser.c tree-sitter-toml/src/scanner.c
 	$(CC) $(CFLAGS) -o $@ $^
 
-out/libtree-sitter-cmake.so: tree-sitter-cmake/src/parser.c tree-sitter-cmake/src/scanner.cc
+out/libtree-sitter-cmake.so: tree-sitter-cmake/src/parser.c tree-sitter-cmake/src/scanner.c
 	$(CC) $(CFLAGS) -o $@ $^
 
 out/libtree-sitter-dockerfile.so: tree-sitter-dockerfile/src/parser.c
@@ -72,13 +72,13 @@ out/libtree-sitter-dockerfile.so: tree-sitter-dockerfile/src/parser.c
 out/libtree-sitter-ruby.so: tree-sitter-ruby/src/parser.c tree-sitter-ruby/src/scanner.cc
 	$(CC) $(CFLAGS) -o $@ $^
 
-out/libtree-sitter-html.so: tree-sitter-html/src/parser.c tree-sitter-html/src/scanner.cc
+out/libtree-sitter-html.so: tree-sitter-html/src/parser.c tree-sitter-html/src/scanner.c
 	$(CC) $(CFLAGS) -o $@ $^
 
-out/libtree-sitter-bash.so: tree-sitter-bash/src/parser.c tree-sitter-bash/src/scanner.cc
+out/libtree-sitter-bash.so: tree-sitter-bash/src/parser.c tree-sitter-bash/src/scanner.c
 	$(CC) $(CFLAGS) -o $@ $^
 
-out/libtree-sitter-elixir.so: tree-sitter-elixir/src/parser.c tree-sitter-elixir/src/scanner.cc
+out/libtree-sitter-elixir.so: tree-sitter-elixir/src/parser.c tree-sitter-elixir/src/scanner.c
 	$(CC) $(CFLAGS) -o $@ $^
 
 out/libtree-sitter-heex.so: tree-sitter-heex/src/parser.c
