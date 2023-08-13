@@ -32,6 +32,7 @@ repos=(
   https://github.com/uyha/tree-sitter-cmake
   https://github.com/camdencheek/tree-sitter-dockerfile
   https://github.com/tree-sitter/tree-sitter-html
+  https://github.com/MDeiml/tree-sitter-markdown
 )
 
 for repo in "${repos[@]}"
