@@ -19,8 +19,8 @@ OBJS = \
   out/libtree-sitter-bash.so \
   out/libtree-sitter-elixir.so \
   out/libtree-sitter-heex.so \
-  out/libtree-markdown.so \
-  out/libtree-markdown-inline.so
+  out/libtree-sitter-markdown.so \
+  out/libtree-sitter-markdown-inline.so
 
 CFLAGS=-O3 -fPIC -shared
 
@@ -86,10 +86,10 @@ out/libtree-sitter-elixir.so: tree-sitter-elixir/src/parser.c tree-sitter-elixir
 out/libtree-sitter-heex.so: tree-sitter-heex/src/parser.c
 	$(CC) $(CFLAGS) -o $@ $^
 
-out/libtree-markdown.so: tree-sitter-markdown/tree-sitter-markdown/src/parser.c	tree-sitter-markdown/tree-sitter-markdown/src/scanner.c
+out/libtree-sitter-markdown.so: tree-sitter-markdown/tree-sitter-markdown/src/parser.c	tree-sitter-markdown/tree-sitter-markdown/src/scanner.c
 	$(CC) $(CFLAGS) -o $@ $^
 
-out/libtree-markdown-inline.so: tree-sitter-markdown/tree-sitter-markdown-inline/src/parser.c tree-sitter-markdown/tree-sitter-markdown-inline/src/scanner.c
+out/libtree-sitter-markdown-inline.so: tree-sitter-markdown/tree-sitter-markdown-inline/src/parser.c tree-sitter-markdown/tree-sitter-markdown-inline/src/scanner.c
 	$(CC) $(CFLAGS) -o $@ $^
 
 install: all
