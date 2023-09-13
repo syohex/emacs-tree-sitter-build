@@ -33,6 +33,7 @@ repos=(
   https://github.com/camdencheek/tree-sitter-dockerfile
   https://github.com/tree-sitter/tree-sitter-html
   https://github.com/MDeiml/tree-sitter-markdown
+  https://github.com/monaqa/tree-sitter-mermaid
 )
 
 for repo in "${repos[@]}"
