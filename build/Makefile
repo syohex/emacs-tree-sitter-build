@@ -22,6 +22,7 @@ OBJS = \
   out/libtree-sitter-markdown.so \
   out/libtree-sitter-markdown-inline.so \
   out/libtree-sitter-mermaid.so \
+  out/libtree-sitter-lua.so \
 
 CFLAGS=-O3 -fPIC -shared
 
@@ -94,6 +95,9 @@ out/libtree-sitter-markdown-inline.so: tree-sitter-markdown/tree-sitter-markdown
 	$(CC) $(CFLAGS) -o $@ $^
 
 out/libtree-sitter-mermaid.so: tree-sitter-mermaid/src/parser.c
+	$(CC) $(CFLAGS) -o $@ $^
+
+out/libtree-sitter-lua.so: tree-sitter-lua/src/parser.c tree-sitter-lua/src/scanner.c
 	$(CC) $(CFLAGS) -o $@ $^
 
 install: all
