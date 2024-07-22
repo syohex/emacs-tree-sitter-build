@@ -26,6 +26,10 @@ repos=(
   https://github.com/elixir-lang/tree-sitter-elixir
   https://github.com/phoenixframework/tree-sitter-heex
   https://github.com/tjdevries/tree-sitter-lua
+  https://github.com/tree-sitter/tree-sitter-php
+  https://github.com/claytonrcarter/tree-sitter-phpdoc
+  https://github.com/tree-sitter/tree-sitter-javascript
+  https://github.com/tree-sitter/tree-sitter-jsdoc
 
   https://github.com/tree-sitter/tree-sitter-json
   https://github.com/ikatyang/tree-sitter-yaml
@@ -35,6 +39,7 @@ repos=(
   https://github.com/tree-sitter/tree-sitter-html
   https://github.com/MDeiml/tree-sitter-markdown
   https://github.com/monaqa/tree-sitter-mermaid
+  https://github.com/tree-sitter/tree-sitter-css
 )
 
 for repo in "${repos[@]}"

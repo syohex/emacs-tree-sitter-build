@@ -23,6 +23,11 @@ OBJS = \
   out/libtree-sitter-markdown-inline.so \
   out/libtree-sitter-mermaid.so \
   out/libtree-sitter-lua.so \
+  out/libtree-sitter-php.so \
+  out/libtree-sitter-phpdoc.so \
+  out/libtree-sitter-javascript.so \
+  out/libtree-sitter-jsdoc.so \
+  out/libtree-sitter-css.so
 
 CFLAGS=-O3 -fPIC -shared
 
@@ -73,7 +78,7 @@ out/libtree-sitter-cmake.so: tree-sitter-cmake/src/parser.c tree-sitter-cmake/sr
 out/libtree-sitter-dockerfile.so: tree-sitter-dockerfile/src/parser.c
 	$(CC) $(CFLAGS) -o $@ $^
 
-out/libtree-sitter-ruby.so: tree-sitter-ruby/src/parser.c tree-sitter-ruby/src/scanner.cc
+out/libtree-sitter-ruby.so: tree-sitter-ruby/src/parser.c tree-sitter-ruby/src/scanner.c
 	$(CC) $(CFLAGS) -o $@ $^
 
 out/libtree-sitter-html.so: tree-sitter-html/src/parser.c tree-sitter-html/src/scanner.c
@@ -98,6 +103,21 @@ out/libtree-sitter-mermaid.so: tree-sitter-mermaid/src/parser.c
 	$(CC) $(CFLAGS) -o $@ $^
 
 out/libtree-sitter-lua.so: tree-sitter-lua/src/parser.c tree-sitter-lua/src/scanner.c
+	$(CC) $(CFLAGS) -o $@ $^
+
+out/libtree-sitter-php.so: tree-sitter-php/php/src/parser.c tree-sitter-php/php/src/scanner.c
+	$(CC) $(CFLAGS) -o $@ -I tree-sitter-php/php/src $^
+
+out/libtree-sitter-phpdoc.so: tree-sitter-phpdoc/src/parser.c tree-sitter-phpdoc/src/scanner.c
+	$(CC) $(CFLAGS) -o $@ $^
+
+out/libtree-sitter-javascript.so: tree-sitter-javascript/src/parser.c tree-sitter-javascript/src/scanner.c
+	$(CC) $(CFLAGS) -o $@ $^
+
+out/libtree-sitter-jsdoc.so: tree-sitter-jsdoc/src/parser.c tree-sitter-jsdoc/src/scanner.c
+	$(CC) $(CFLAGS) -o $@ $^
+
+out/libtree-sitter-css.so: tree-sitter-css/src/parser.c tree-sitter-css/src/scanner.c
 	$(CC) $(CFLAGS) -o $@ $^
 
 install: all
