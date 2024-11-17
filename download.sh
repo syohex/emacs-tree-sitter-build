@@ -30,6 +30,8 @@ repos=(
   https://github.com/claytonrcarter/tree-sitter-phpdoc
   https://github.com/tree-sitter/tree-sitter-javascript
   https://github.com/tree-sitter/tree-sitter-jsdoc
+  https://github.com/tree-sitter/tree-sitter-haskell
+  https://github.com/ionide/tree-sitter-fsharp
 
   https://github.com/tree-sitter/tree-sitter-json
   https://github.com/ikatyang/tree-sitter-yaml

@@ -27,7 +27,9 @@ OBJS = \
   out/libtree-sitter-phpdoc.so \
   out/libtree-sitter-javascript.so \
   out/libtree-sitter-jsdoc.so \
-  out/libtree-sitter-css.so
+  out/libtree-sitter-css.so \
+  out/libtree-sitter-haskell.so \
+  out/libtree-sitter-fsharp.so
 
 CFLAGS=-O3 -fPIC -shared
 
@@ -119,6 +121,12 @@ out/libtree-sitter-jsdoc.so: tree-sitter-jsdoc/src/parser.c tree-sitter-jsdoc/sr
 
 out/libtree-sitter-css.so: tree-sitter-css/src/parser.c tree-sitter-css/src/scanner.c
 	$(CC) $(CFLAGS) -o $@ $^
+
+out/libtree-sitter-haskell.so: tree-sitter-haskell/src/parser.c tree-sitter-haskell/src/scanner.c
+	$(CC) $(CFLAGS) -o $@ $^
+
+out/libtree-sitter-fsharp.so: tree-sitter-fsharp/fsharp/src/parser.c tree-sitter-fsharp/fsharp/src/scanner.c
+	$(CC) $(CFLAGS) -o $@ -I tree-sitter-fsharp/fsharp/src $^
 
 install: all
 	sudo cp -v out/*.so /usr/local/lib
