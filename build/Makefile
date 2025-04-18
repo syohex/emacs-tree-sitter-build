@@ -75,7 +75,7 @@ out/libtree-sitter-toml.so: tree-sitter-toml/src/parser.c tree-sitter-toml/src/s
 	$(CC) $(CFLAGS) -o $@ $^
 
 out/libtree-sitter-cmake.so: tree-sitter-cmake/src/parser.c tree-sitter-cmake/src/scanner.c
-	$(CC) $(CFLAGS) -o $@ $^
+	$(CC) $(CFLAGS) -o $@ -I tree-sitter-cmake/src $^
 
 out/libtree-sitter-dockerfile.so: tree-sitter-dockerfile/src/parser.c
 	$(CC) $(CFLAGS) -o $@ $^
