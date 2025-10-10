@@ -60,19 +60,19 @@ out/libtree-sitter-rust.so: tree-sitter-rust/src/parser.c tree-sitter-rust/src/s
 	$(CC) $(CFLAGS) -o $@ $^
 
 out/libtree-sitter-typescript.so: tree-sitter-typescript/typescript/src/parser.c tree-sitter-typescript/typescript/src/scanner.c
-	$(CC) $(CFLAGS) -o $@ $^
+	$(CC) $(CFLAGS) -o $@ -I tree-sitter-typescript/typescript/src $^
 
 out/libtree-sitter-tsx.so: tree-sitter-typescript/tsx/src/parser.c tree-sitter-typescript/tsx/src/scanner.c
-	$(CC) $(CFLAGS) -o $@ $^
+	$(CC) $(CFLAGS) -o $@ -I tree-sitter-typescript/tsx/src $^
 
 out/libtree-sitter-json.so: tree-sitter-json/src/parser.c
 	$(CC) $(CFLAGS) -o $@ $^
 
 out/libtree-sitter-yaml.so: tree-sitter-yaml/src/parser.c tree-sitter-yaml/src/scanner.cc
-	$(CC) $(CFLAGS) -o $@ $^
+	$(CC) $(CFLAGS) -o $@ -I tree-sitter-yaml/src $^
 
 out/libtree-sitter-toml.so: tree-sitter-toml/src/parser.c tree-sitter-toml/src/scanner.c
-	$(CC) $(CFLAGS) -o $@ $^
+	$(CC) $(CFLAGS) -o $@ -I tree-sitter-toml/src $^
 
 out/libtree-sitter-cmake.so: tree-sitter-cmake/src/parser.c tree-sitter-cmake/src/scanner.c
 	$(CC) $(CFLAGS) -o $@ -I tree-sitter-cmake/src $^
@@ -105,7 +105,7 @@ out/libtree-sitter-mermaid.so: tree-sitter-mermaid/src/parser.c
 	$(CC) $(CFLAGS) -o $@ $^
 
 out/libtree-sitter-lua.so: tree-sitter-lua/src/parser.c tree-sitter-lua/src/scanner.c
-	$(CC) $(CFLAGS) -o $@ $^
+	$(CC) $(CFLAGS) -o $@ -I tree-sitter-lua/src $^
 
 out/libtree-sitter-php.so: tree-sitter-php/php/src/parser.c tree-sitter-php/php/src/scanner.c
 	$(CC) $(CFLAGS) -o $@ -I tree-sitter-php/php/src $^
