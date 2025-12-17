@@ -69,7 +69,7 @@ out/libtree-sitter-json.so: tree-sitter-json/src/parser.c
 	$(CC) $(CFLAGS) -o $@ $^
 
 out/libtree-sitter-yaml.so: tree-sitter-yaml/src/parser.c tree-sitter-yaml/src/scanner.cc
-	$(CC) $(CFLAGS) -o $@ -I tree-sitter-yaml/src $^
+	$(CXX) $(CFLAGS) -o $@ -I tree-sitter-yaml/src $^
 
 out/libtree-sitter-toml.so: tree-sitter-toml/src/parser.c tree-sitter-toml/src/scanner.c
 	$(CC) $(CFLAGS) -o $@ -I tree-sitter-toml/src $^
@@ -77,7 +77,7 @@ out/libtree-sitter-toml.so: tree-sitter-toml/src/parser.c tree-sitter-toml/src/s
 out/libtree-sitter-cmake.so: tree-sitter-cmake/src/parser.c tree-sitter-cmake/src/scanner.c
 	$(CC) $(CFLAGS) -o $@ -I tree-sitter-cmake/src $^
 
-out/libtree-sitter-dockerfile.so: tree-sitter-dockerfile/src/parser.c
+out/libtree-sitter-dockerfile.so: tree-sitter-dockerfile/src/parser.c tree-sitter-dockerfile/src/scanner.c
 	$(CC) $(CFLAGS) -o $@ $^
 
 out/libtree-sitter-ruby.so: tree-sitter-ruby/src/parser.c tree-sitter-ruby/src/scanner.c
