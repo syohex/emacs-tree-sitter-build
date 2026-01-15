@@ -32,6 +32,7 @@ OBJS = \
   out/libtree-sitter-fsharp.so
 
 CFLAGS=-O3 -fPIC -shared
+INSTALLDIR=$(HOME)/.emacs.d/tree-sitter
 
 all: $(OBJS)
 
@@ -129,8 +130,7 @@ out/libtree-sitter-fsharp.so: tree-sitter-fsharp/fsharp/src/parser.c tree-sitter
 	$(CC) $(CFLAGS) -o $@ -I tree-sitter-fsharp/fsharp/src $^
 
 install: all
-	sudo cp -v out/*.so /usr/local/lib
-	sudo ldconfig
+	cp -v out/*.so $(INSTALLDIR)
 
 .PHONY: clean
 clean:
@@ -138,5 +138,4 @@ clean:
 
 .PHONY: uninstall
 uninstall:
-	sudo rm -f /usr/local/lib/libtree-sitter*.so
-	sudo ldconfig
+	rm -f $(INSTALLDIR)/libtree-sitter*.so
